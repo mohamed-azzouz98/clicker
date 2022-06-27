@@ -1,22 +1,51 @@
 body{
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-
+    margin: 0;
+    padding: 0;
 }
 
-
-#buttonOnClick {
-    width: 80%;
-    margin: 0 auto;
+#allContainer{
+    display: flex;
+    justify-content: space-between;
     text-align: center;
-    padding: 15px;
+    
 }
 
-#shop {
-    width: 80%;
+#leftContainer{
+    background-color: aqua;
+    width: 30%;
+}
+
+#middleContainer{
+    background-color: brown;
+    width: 45%;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+}
+
+#middleContainer div{
+    width: 90%;
+    height: 80px;
     margin: 0 auto;
-    text-align: center;
-    margin-top: 20px;
-    padding: 15px;
+    background-color: aliceblue;
+}
+
+#rightContainer{
+    background-color: blue;
+    width: 25%;
+    height: 1200px;
+}
+
+#shopForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#shopForm div img{
+    width: 80px;
+    float: left;
+    filter: brightness(0%);
 }

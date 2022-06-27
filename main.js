@@ -1,11 +1,12 @@
-let cookies = 0;
+let luffy = 0;
 let buttonClick = document.querySelector("#buttonClick");
 number = 1;
+document.getElementById("luffyPerClick").innerHTML = number + ' luffy par clique';
 
 
-buttonClick.addEventListener("click", function coockieClick(){
-    cookies += number;
-    document.getElementById("cookies").innerHTML = cookies;
+buttonClick.addEventListener("click", function cookieClick(){
+    luffy += number;
+    document.getElementById("luffy").innerHTML = luffy;
 });
 
 let cursors = 0;
@@ -14,14 +15,14 @@ let pointCursors = 0;
 let buyCursor = document.querySelector("#buyCursor");
 buyCursor.addEventListener("click", () =>{
     let cursorCost = Math.floor(10 * Math.pow(2,cursors));     //works out the cost of this cursor
-    if(cookies >= cursorCost){                                   //checks that the player can afford the cursor
+    if(luffy >= cursorCost){                                   //checks that the player can afford the cursor
         cursors += 1;                                   //increases number of cursors
         pointCursors += 1 ;
-    	cookies = cookies - cursorCost;                          //removes the cookies spent
+    	luffy = luffy - cursorCost;                          //removes the luffy spent
         document.getElementById('cursors').innerHTML = cursors;  //updates the number of cursors for the user
-        document.getElementById('cookies').innerHTML = cookies;  //updates the number of cookies for the user
+        document.getElementById('luffy').innerHTML = luffy;  //updates the number of luffy for the user
         number += 1;
-        document.getElementById("coockiesPerClick").innerHTML = number + ' cookies par clique';
+        
 
     };
     let nextCursorsCost = Math.floor(10 * Math.pow(2,cursors));       //works out the cost of the next cursor
@@ -37,12 +38,12 @@ let buyBooster = document.querySelector("#buyBooster");
 
 buyBooster.addEventListener("click", () => {
     let boosterCost = Math.floor(50 * Math.pow(2,booster));
-	if (cookies >= boosterCost) {
+	if (luffy >= boosterCost) {
 		booster = booster + 1;
 		pointBooster = pointBooster + 10 ;
-		cookies = cookies - boosterCost;
+		luffy = luffy - boosterCost;
 		document.getElementById('booster').innerHTML = booster;  
-        document.getElementById('cookies').innerHTML = cookies;  
+        document.getElementById('luffy').innerHTML = luffy;  
 	};
 	let nextBoosterCost = Math.floor(50 * Math.pow(2,booster))
 	document.getElementById('boosterCost').innerHTML = nextBoosterCost;
@@ -52,8 +53,13 @@ buyBooster.addEventListener("click", () => {
 
 window.setInterval(function(){
 	
-    document.getElementById('cookiesSecond').innerHTML =  pointBooster + ' cookies par seconde';
-    cookies += pointBooster;
-    document.getElementById("cookies").innerHTML = cookies;
+    document.getElementById('luffySecond').innerHTML =  pointBooster + ' luffy par seconde';
+    luffy += pointBooster;
+    document.getElementById("luffy").innerHTML = luffy;
     
 }, 1000);
+
+
+
+
+
