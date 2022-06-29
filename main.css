@@ -18,18 +18,26 @@ body{
 #middleContainer{
     background-color: brown;
     width: 45%;
-    height: 1200px;
+    height: 1000px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
+    
   
 }
 
 #middleContainer div{
     width: 90%;
-    height: 80px;
+    height: 90px;
     margin: 0 auto;
     background-color: aliceblue;
+    visibility: hidden;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+#middleContainer img {
+    width: 40px;
 }
 
 #rightContainer{
@@ -44,8 +52,16 @@ body{
     justify-content: space-between;
 }
 
+#shopForm div {
+    margin-top: 20px;
+    height: 200px;
+    background-color: aquamarine;
+    visibility: hidden;
+}
+
 #shopForm div img{
     width: 80px;
     float: left;
     filter: brightness(0%);
+    
 }
